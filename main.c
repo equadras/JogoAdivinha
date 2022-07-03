@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 int numero_jogos = 0;
 int historico[5];
 
@@ -12,7 +13,7 @@ int sorteador(){
 
 void limpar_hist(){
   if (numero_jogos == 0){
-    printf("\n-----NAO TEMOS JOGOS PARA TIRAR-----\n");
+    printf("\n-----NAO TEMOS JOGOS PARA LIMPAR-----\n");
     return;
   }
   for(int i=0; i <= 4; i ++){
@@ -43,7 +44,7 @@ int jogo(){
   
   while (tentativa != 10) {  
     if (tentativa == 0) {
-      printf("\nA maquina ja escolheu o numero dela, sera que vc consegue acertar ?\n");
+      printf("\nA maquina ja escolheu o numero dela entre 1 e 100, sera que vc consegue acertar ?\n");
       }
       printf("sua escolha -> ");
       scanf("%d", &escolha);
