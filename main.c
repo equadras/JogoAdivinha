@@ -43,7 +43,7 @@ int jogo(){
   
   while (tentativa != 10) {  
     if (tentativa == 0) {
-      printf("\nA maquina ja escolheu o numero dela, sera que vc consegue acertar ?\n");
+      printf("\nA maquina ja escolheu o numero dela entre 1 e 100, sera que vc consegue acertar ?\n");
       }
       printf("sua escolha -> ");
       scanf("%d", &escolha);
