@@ -27,7 +27,7 @@ void mostrar_historico(){
     printf("\n-----NAO TEMOS JOGOS PARA MOSTRAR-----\n");
     return;
   }
-  printf("\n-----HISTORICO DOS UTLIMOS 5 JOGOS-----\n");
+  printf("\n-----HISTORICO DOS ULTIMOS 5 JOGOS-----\n");
   for (int i = 0; i < 5; i++) {
     printf("%d - tentativas %d\n", i + 1, historico[i]);
     if (i == numero_jogos - 1) {
@@ -57,13 +57,13 @@ int jogo(){
       printf("%d é menor que o numero escolhido pela maquina, te restam %d vidas\n", escolha, (10 - tentativa));
     }
     if (escolha == numero_sorteado) {
-      printf("%d é o numero escolhido pela maquina, VOCE VENCEU PAULO TORRENS\n", escolha);
+      printf("\n-----%d É O NUMERO ESCOLHIDO PELA MAQUINA, VOCE VENCEU PAULO TORRENS-----\n", escolha);
       break;
     }
   }
   
   if(tentativa == 10) {
-    printf("VOCE PERDEU BOBAO, ERA O NUMERO %d\n", numero_sorteado); 
+    printf("\n-----VOCE PERDEU BOBAO, ERA O NUMERO %d-----\n", numero_sorteado); 
   }
   
   numero_jogos++;
@@ -92,7 +92,7 @@ int main(){
     case 2:{mostrar_historico(); break;};
     case 3:{limpar_hist(); break;};
     case 4:{printf("desligando...\n"); return EXIT_SUCCESS;};
-    default:{printf("Ocorreu um erro Tente novamente\n");}
+    default:{printf("\n-----OCORREU UM ERRO TENTE NOVAMENTE-----\n");}
   }
 }
 }
