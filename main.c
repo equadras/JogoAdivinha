@@ -30,10 +30,17 @@ void mostrar_historico(){
   }
   printf("\n-----HISTORICO DOS ULTIMOS 5 JOGOS-----\n");
   for (int i = 0; i < 5; i++) {
-    printf("%d - tentativas %d\n", i + 1, historico[i]);
+    if (historico[i] == 10){
+      printf("%d -Vc perdeu esse jogo!! Eram no maximo %d tentativas\n", i + 1,historico[i]);
+    }
+    else
+      printf("%d - Vc acertou em %d tentativas! Parabens\n", i + 1, historico[i]);
+    
+    
     if (i == numero_jogos - 1) {
       return;
     }
+
   }
 }
 
@@ -74,9 +81,10 @@ int jogo(){
   historico[1] = historico[2];
   historico[2] = historico[3];
   historico[3] = historico[4];  
+  numero_jogos--;
   }
+  
   historico[numero_jogos - 1] = tentativa;
-
   return 1;
 }
     
